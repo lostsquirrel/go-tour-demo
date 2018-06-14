@@ -18,5 +18,5 @@ func Pic(dx, dy int) [][]uint8 {
 }
 
 func main() {
-	pic.Show(Pic(10, 10))
+	pic.Show(Pic)
 }
