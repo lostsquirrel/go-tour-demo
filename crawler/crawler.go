@@ -3,8 +3,9 @@ package main
 import (
     "fmt"
 	"net/http"
-		"sync"
-	"golang.org/x/net/html"
+    "sync"
+			"github.com/PuerkitoBio/goquery"
+	"log"
 )
 
 type Fetcher interface {
@@ -46,15 +47,22 @@ func (f MFetcher) Fetch(url string) (body string, urls []string, err error) {
 	defer resp.Body.Close()
 	//content, err := ioutil.ReadAll(resp.Body)
 	//body = string(content)
-	z := html.NewTokenizer(resp.Body)
-	for  {
-		tt := z.Next()
-		if tt == html.ErrorToken {
-			break
-		} else {
-			fmt.Println(tt)
-		}
+	doc, err := goquery.NewDocumentFromReader(resp.Body)
+	if err != nil {
+		log.Fatal(err)
 	}
+	doc.Find(".commentlist li").Each(func(i int, s *goquery.Selection) {
+		// For each item found, get the band and title
+
+		fmt.Println(s.Find(".img-hash").Text())
+		fmt.Println(s.Find(".tucao-like-container").ChildrenFiltered("span").First().Text())
+		fmt.Println(s.Find(".tucao-unlike-container").ChildrenFiltered("span").First().Text())
+		//fmt.Println("")
+		//band := s.Find("a").Text()
+		//title := s.Find("i").Text()
+		//fmt.Printf("Review %d: %s - %s\n", i, band, title)
+	})
+
 	//fmt.Println(body)
 	return "", []string{}, err
 }
