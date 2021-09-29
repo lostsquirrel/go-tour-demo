@@ -1,8 +1,8 @@
 package main
 
 import (
-	"strings"
 	"golang.org/x/tour/wc"
+	"strings"
 )
 
 func WordCount(s string) map[string]int {
