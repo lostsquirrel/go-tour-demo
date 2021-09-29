@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	var s []int
 	printSlice(s)
@@ -14,3 +16,6 @@ func main() {
 	printSlice(s) // len=5 cap=6 [0 1 2 3 4] ?
 }
 
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+}
