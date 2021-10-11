@@ -12,6 +12,7 @@ func print2Dx2(arr [][2]int) {
 			log.Printf("%d,%d -> %d", r, c, col)
 		}
 	}
+	log.Println()
 }
 func Test2DInit(t *testing.T) {
 	var arr [4][2]int
@@ -76,6 +77,7 @@ func foo(a [1e6]int) {
 func bar(a *[1e6]int)  {
 	fmt.Sprintln(len(a))
 }
+
 func BenchmarkArrayPass(b *testing.B) {
 	var a [1e6]int
 	for i := 0; i < b.N; i++ {
@@ -88,4 +90,18 @@ func BenchmarkArrayPointerPass(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		bar(&a)
 	}
+}
+
+func Test2DArrayAssignSameType(t *testing.T) {
+	var a1 [2][2]int
+	var a2 [2][2]int
+
+	a2[0][0] = 10
+	a2[0][1] = 20
+	a2[1][0] = 30
+	a2[1][1] = 40
+
+	a1 = a2
+	print2Dx2(a1[:])
+	print2Dx2(a2[:])
 }

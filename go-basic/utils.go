@@ -6,6 +6,7 @@ func printIntSlices(a []int) {
 	for i, v := range a {
 		log.Printf("%d: %d", i, v)
 	}
+	log.Println()
 }
 
 func printSlicesInfo(s []interface{}) {
@@ -22,4 +23,5 @@ func printStringSlices(s []string) {
 	for i, v := range s {
 		log.Printf("%d: %s", i, v)
 	}
+	log.Println()
 }
