@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 const Pi = 3.14
 
-func main() {
+func TestConstants(t *testing.T) {
 	const World = "世界"
 	fmt.Println("Hello", World)
 	fmt.Println("Happy", Pi, "Day")

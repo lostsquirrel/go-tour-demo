@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func main() {
+func TestConstantsiota(t *testing.T) {
 	type Grades int
 
 	const (

@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func main() {
+func TestDefer(t *testing.T) {
 	defer fmt.Println("world")
 	fmt.Println("hello")
 }
