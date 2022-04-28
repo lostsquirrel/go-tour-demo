@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestFor() {
+func TestFor(t *testing.T) {
 	sum := 0
 	for i := 0; i < 10; i++ {
 		sum += i

@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"go-tour-demo/common"
 	"testing"
 )
 
 func TestMapLiterals(t *testing.T) {
-	var m = map[string]Vertex{
-		"Bell Labs": Vertex{
+	var m = map[string]common.FloatVertex{
+		"Bell Labs": common.FloatVertex{
 			40.68433, -74.39967,
 		},
 		"Google": {
@@ -15,7 +16,7 @@ func TestMapLiterals(t *testing.T) {
 		},
 	}
 
-	var n = map[string]Vertex{
+	var n = map[string]common.FloatVertex{
 		"Bell Labs": {40.68433, -74.39967},
 		"Google":    {37.42202, -122.08408},
 	}

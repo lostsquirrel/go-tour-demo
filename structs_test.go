@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"go-tour-demo/common"
+	"testing"
+)
 
-func TestStruct() {
-	fmt.Println(IntVertex{1, 2})
+func TestStruct(t *testing.T) {
+	fmt.Println(common.IntVertex{1, 2})
 }

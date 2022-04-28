@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"testing"
 )
 
 func TestExportedNames(t *testing.T) {
-	fmt.Println(math.pi)
+	fmt.Println(math.Pi)
 }

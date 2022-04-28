@@ -1,17 +1,20 @@
 package main
 
-import "testing"
+import (
+	"go-tour-demo/utils"
+	"testing"
+)
 
 func TestMakingSlice(t *testing.T) {
 	a := make([]int, 5)
-	printSliceWithDescription("a", a)
+	utils.PrintSliceWithDescription("a", a)
 
 	b := make([]int, 0, 5)
-	printSliceWithDescription("b", b)
+	utils.PrintSliceWithDescription("b", b)
 
 	c := b[:2]
-	printSliceWithDescription("c", c)
+	utils.PrintSliceWithDescription("c", c)
 
 	d := c[2:5]
-	printSliceWithDescription("d", d)
+	utils.PrintSliceWithDescription("d", d)
 }

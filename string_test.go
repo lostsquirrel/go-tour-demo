@@ -8,6 +8,7 @@ import (
 func TestString(t *testing.T) {
 	s := "abcdefghijklmnopqrstuv"
 	for c := range s {
+		fmt.Printf("%d", c)
 		fmt.Println(c)
 	}
 }
