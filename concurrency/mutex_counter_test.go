@@ -33,3 +33,15 @@ func TestMutex(t *testing.T) {
 	time.Sleep(time.Second)
 	fmt.Println(c.Value("somekey"))
 }
+
+func TestWaitGroup(t *testing.T) {
+	var wg sync.WaitGroup
+	for i := 0; i < 10; i++ {
+		wg.Add(1)
+		go func(x int) {
+			defer wg.Done()
+			fmt.Println(x)
+		}(i)
+	}
+	wg.Wait()
+}

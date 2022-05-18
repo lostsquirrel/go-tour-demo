@@ -10,5 +10,6 @@ func TestString(t *testing.T) {
 	for c := range s {
 		fmt.Printf("%d", c)
 		fmt.Println(c)
+		fmt.Println(string(rune(c)))
 	}
 }

@@ -87,7 +87,7 @@ func TestArrayIterationByRangeWithBlank(t *testing.T) {
 
 func TestMultiDimensionalArrayInitial(t *testing.T) {
 	a := [3][2]int{
-		[2]int{1, 2}, //noqa
+		[2]int{1, 2}, //nolint
 		[2]int{3, 4},
 	}
 

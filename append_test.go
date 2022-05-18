@@ -17,4 +17,7 @@ func TestAppend(t *testing.T) {
 
 	s = append(s, 2, 3, 4)
 	utils.PrintSlice(s) // len=5 cap=6 [0 1 2 3 4] ?
+
+	s = append(s, s...)
+	utils.PrintSlice(s)
 }
