@@ -7,7 +7,7 @@ import (
 )
 
 func TestStructFields(t *testing.T) {
-	v := common.IntVertex{1, 2}
+	v := common.IntVertex{X: 1, Y: 2}
 	v.X = 4
 	fmt.Println(v.X)
 }

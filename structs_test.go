@@ -7,5 +7,5 @@ import (
 )
 
 func TestStruct(t *testing.T) {
-	fmt.Println(common.IntVertex{1, 2})
+	fmt.Println(common.IntVertex{X: 1, Y: 2})
 }
