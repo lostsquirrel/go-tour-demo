@@ -104,3 +104,4 @@ func TestMultiDimensionalArrayShotSyntx(t *testing.T) {
 
 	fmt.Println(a)
 }
+
